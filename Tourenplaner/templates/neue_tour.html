@@ -1,10 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Neue Tour</title>
-</head>
-<body>
-
-</body>
-</html>
+{% include "header.jinja" %}
+<form method="POST">
+  <div class="mb-3">
+    <label for="Tour" class="form-label">Aufgabe</label>
+    <input type="text" class="form-control" id="Tour" name="Name der Tour">
+  </div>
+  <div class="mb-3">
+    <label for="deadline" class="form-label">Deadline</label>
+    {# todo: Datumsanzeige in HTML von US Format in DE Format umwandeln. #}
+    <input type="date" class="form-control" id="deadline" name="deadline">
+  </div>
+  <button type="submit" class="btn btn-primary">Abschicken</button>
+</form>
+{% include "footer.jinja" %}
