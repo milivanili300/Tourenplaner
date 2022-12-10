@@ -5,12 +5,12 @@ def auslesen():
     return inhalt
 
 
-def todos_laden():
+def touren_laden():
     #test2
-    todos = auslesen()
-    todo_liste = todos.split("\n")
+    touren = auslesen()
+    touren_liste = touren.split("\n")
     neue_liste = []
-    for eintrag in todo_liste:
+    for eintrag in touren_liste:
         aufgabe, deadline = eintrag.split(",")
         neue_liste.append([aufgabe, deadline])
     return neue_liste

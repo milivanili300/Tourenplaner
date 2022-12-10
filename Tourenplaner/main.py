@@ -4,19 +4,21 @@ from flask import request
 import plotly.express as px
 from plotly.offline import plot
 
-from datenbank import abspeichern, auslesen, todos_laden
+from datenbank import abspeichern, auslesen, touren_laden
 
 app = Flask("Tourenplaner")
 
 
-@app.route("/")
-def start():
-    touren = todos_laden()
-    return render_template("index.html", liste=touren, seitentitel="start")
 
+@app.route("/", methods=["GET", "POST"])
+def start():
+    if request.method == "POST":
+        a = request.form.getlist('a')
+        return "1" if len(a) == 1 else "0"
+    return render_template('kategorisierung.html')
 
 @app.route("/add", methods=["GET", "POST"])
-def add_new_todo():
+def add_new_tour():
     if request.method == "GET":
         return render_template("neue_tour.html", seitentitel="Todo Eingabe")
 
@@ -31,6 +33,8 @@ def add_new_todo():
 
 @app.route("/overview")
 def grafik():
+    return "nope"
+    """
     todos = todos_laden()
     deadlines = {}
     for todo in todos:
@@ -45,7 +49,7 @@ def grafik():
     div = plot(fig, output_type="div")
 
     return render_template("overview.html", barchart=div, seitentitel="Tourenübersicht")
-
+    """
 
 if __name__ == "__main__":
     app.run(debug=True, port=5550)
