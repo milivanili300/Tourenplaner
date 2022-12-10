@@ -7,23 +7,70 @@
       <form method="POST" class="row justify-content-center">
         <div class="col-5">
             <label for="Dauer" class="form-label">Dauer</label>
-                <select id="dauer" name="dauer" class="form-select">
+                <select id="Dauer" name="dauer" class="form-select">
                     <option selected>Wählen</option>
-                    <option value="<1"><1h</option>
-                    <option value="dark red">Bordeaux</option>
-                    <option value="purple">Violett</option>
-                    <option value="lavender">Lavendel</option>
-                    <option value="light blue">Hellblau</option>
-                    <option value="navy">Dunkelblau</option>
+                    <option value="<1"><1 Stunden</option>
+                    <option value="1">1-2 Stunden</option>
+                    <option value="2">2-3 Stunden</option>
+                    <option value="3"> >3 Stunden</option>
+                    <option value="4">Dauer egal</option>
+
+                </select>
+        </div>
+      </form>
+
+        <div class="col-5">
+            <label for="Höhenmeter" class="form-label">Höhenmeter</label>
+                <select id="Höhenmeter" name="Höhenmeter" class="form-select">
+                    <option selected>Wählen</option>
+                    <option value="<1"><1 Stunden</option>
+                    <option value="1">1-2 Stunden</option>
+                    <option value="2">2-3 Stunden</option>
+                    <option value="3"> >3 Stunden</option>
+                    <option value="4">Dauer egal</option>
 
                 </select>
         </div>
 
+        <div class="col-5">
+            <label for="Tiefenmeter" class="form-label">Tiefenmeter</label>
+                <select id="Tiefenmeter" name="Tiefenmeter" class="form-select">
+                    <option selected>Wählen</option>
+                    <option value="<1"><1 Stunden</option>
+                    <option value="1">1-2 Stunden</option>
+                    <option value="2">2-3 Stunden</option>
+                    <option value="3"> >3 Stunden</option>
+                    <option value="4">Dauer egal</option>
+
+                </select>
+        </div>
+
+            <div class="col-5">
+            <label for="Technische Schwierigkeit" class="form-label">Technische Schwierigkeit</label>
+                <select id="Technische Schwierigkeit" name="Technische Schwierigkeit" class="form-select">
+                    <option selected>Wählen</option>
+                    <option value="<1"><1 Stunden</option>
+                    <option value="1">1-2 Stunden</option>
+                    <option value="2">2-3 Stunden</option>
+                    <option value="3"> >3 Stunden</option>
+                    <option value="4">Dauer egal</option>
+
+                </select>
+        </div>
+                <div class="col-5">
+            <label for="ÖV" class="form-label">Erreichbarkeit mit ÖV</label>
+                <select id="ÖV" name="ÖVt" class="form-select">
+                    <option selected>Wählen</option>
+                    <option value="1">Ja</option>
+                    <option value="0">Nein</option>
+                </select>
+        </div>
   <div class="mb-3">
     <label for="deadline" class="form-label">Datum der Tour</label>
     {# todo: Datumsanzeige in HTML von US Format in DE Format umwandeln. #}
     <input type="date" class="form-control" id="deadline" name="deadline">
   </div>
-  <button type="submit" class="btn btn-primary">Abschicken</button>
+  <button type="submit" class="btn btn-primary">Hinzufügen</button>
 </form>
+
 {% include "footer.jinja" %}
