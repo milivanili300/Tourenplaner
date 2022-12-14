@@ -1,3 +1,11 @@
 {
-  "text": "Deine Tour"
-}
+    "Tour 1" : {
+        "dauer": 2,
+        "tiefenmeter": 3,
+        "höhenmeter": 42,
+        "Technische Schwierigkeit": 4,
+        "Gefahrenstufe": 4,
+        "Erreichbarkeit mit ÖV": "Ja"
+    },
+
+   }

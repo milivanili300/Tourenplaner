@@ -8,12 +8,10 @@ from datenbank import abspeichern, auslesen, touren_laden
 
 app = Flask("Tourenplaner")
 
-
-
 @app.route("/", methods=["GET", "POST"])
 def start():
     if request.method == "POST":
-        a = request.form.getlist('a')
+        dauer = request.form["dauer"]
         return "1" if len(a) == 1 else "0"
     return render_template('kategorisierung.html')
 

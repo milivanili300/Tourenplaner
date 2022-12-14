@@ -1,0 +1,7 @@
+
+data["Tour 1"]["tiefenmeter"]
+data["new tour"] = {
+    "tiefenmeter": benutzereingabe,
+    "dauer": benutzereingabe,
+    ...
+}
