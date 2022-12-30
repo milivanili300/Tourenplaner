@@ -2,6 +2,9 @@
 data["Tour 1"]["tiefenmeter"]
 data["new tour"] = {
     "tiefenmeter": benutzereingabe,
+    "höhenmeter": benutzereingabe,
     "dauer": benutzereingabe,
+    "risiko": benutzereingabe,
+    ""
     ...
 }
