@@ -1,74 +1,87 @@
 {% include "header.jinja" %}
 <form method="POST">
-  <div class="mb-3">
-    <label for="Name der Tour" class="form-label">Name der Tour</label>
-    <input type="text" class="form-control" id="Name der Tour" name="Name der Tour">
-  </div>
-      <form method="POST" class="row justify-content-center">
+    <div class="mb-3">
+        <label for="Name der Tour" class="form-label">Name der Tour</label>
+        <input type="text" class="form-control" id="Name der Tour" name="Name der Tour">
+    </div>
+    <div class="row justify-content-center">
         <div class="col-5">
             <label for="Dauer" class="form-label">Dauer</label>
-                <select id="Dauer" name="dauer" class="form-select">
-                    <option selected>Wählen</option>
-                    <option value="<1"><1 Stunden</option>
-                    <option value="1">1-2 Stunden</option>
-                    <option value="2">2-3 Stunden</option>
-                    <option value="3"> >3 Stunden</option>
-                    <option value="4">Dauer egal</option>
+            <select id="Dauer" name="dauer" class="form-select">
+                <option selected>Wählen</option>
+                <option value="<1"><1 Stunden</option>
+                <option value="1">1-2 Stunden</option>
+                <option value="2">2-3 Stunden</option>
+                <option value="3"> >3 Stunden</option>
+                <option value="4">Dauer egal</option>
 
-                </select>
-        </div>
-      </form>
-
-        <div class="col-5">
-            <label for="Höhenmeter" class="form-label">Höhenmeter</label>
-                <select id="Höhenmeter" name="Höhenmeter" class="form-select">
-                    <option selected>Wählen</option>
-                    <option value="<1"><1 Stunden</option>
-                    <option value="1">1-2 Stunden</option>
-                    <option value="2">2-3 Stunden</option>
-                    <option value="3"> >3 Stunden</option>
-                    <option value="4">Dauer egal</option>
-
-                </select>
+            </select>
         </div>
 
         <div class="col-5">
-            <label for="Tiefenmeter" class="form-label">Tiefenmeter</label>
-                <select id="Tiefenmeter" name="Tiefenmeter" class="form-select">
-                    <option selected>Wählen</option>
-                    <option value="<1"><1 Stunden</option>
-                    <option value="1">1-2 Stunden</option>
-                    <option value="2">2-3 Stunden</option>
-                    <option value="3"> >3 Stunden</option>
-                    <option value="4">Dauer egal</option>
+            <label for="hoehenmeter" class="form-label">Höhenmeter</label>
+            <select id="hoehenmeter" name="hoehenmeter" class="form-select">
+                <option selected>Wählen</option>
+                <option value="500"> <500 Höhenmeter</option>
+                <option value="1000"> bis 1000 Höhenmeter</option>
+                <option value="1500"> bis 1500 Höhenmeter</option>
+                <option value="2000"> bis 2000 Höhenmeter</option>
+                <option value="3000"> bis 3000 Höhenmeter</option>
 
-                </select>
+            </select>
         </div>
 
-            <div class="col-5">
-            <label for="Technische Schwierigkeit" class="form-label">Technische Schwierigkeit</label>
-                <select id="Technische Schwierigkeit" name="Technische Schwierigkeit" class="form-select">
-                    <option selected>Wählen</option>
-                    <option value="<1"><1 Stunden</option>
-                    <option value="1">1-2 Stunden</option>
-                    <option value="2">2-3 Stunden</option>
-                    <option value="3"> >3 Stunden</option>
-                    <option value="4">Dauer egal</option>
+        <div class="col-5">
+            <label for="tiefenmeter" class="form-label">Tiefenmeter</label>
+            <select id="tiefenmeter" name="tiefenmeter" class="form-select">
+                <option selected>Wählen</option>
+                <option value="600"> <600 Tiefenmeter</option>
+                <option value="1000"> Bis 1000 Tiefenmeter</option>
+                <option value="1500"> Bis 1500 Tiefenmeter</option>
+                <option value="2000"> Bis 2000 Tiefenmeter</option>
+                <option value="3000"> Bis 3000 Tiefenmeter</option>
 
-                </select>
+            </select>
         </div>
-                <div class="col-5">
-            <label for="ÖV" class="form-label">Erreichbarkeit mit ÖV</label>
-                <select id="ÖV" name="ÖVt" class="form-select">
-                    <option selected>Wählen</option>
-                    <option value="1">Ja</option>
-                    <option value="0">Nein</option>
-                </select>
+
+        <div class="col-5">
+            <label for="schwierigkeit" class="form-label">Technische Schwierigkeit</label>
+            <select id="schwierigkeit" name="schwierigkeit" class="form-select">
+                <option selected>Wählen</option>
+                <option value="1">Level 1</option>
+                <option value="2"> Level 2 </option>
+                <option value="3"> Level 3</option>
+                <option value="4"> Level 4</option>
+                <option value="5"> Level 5 </option>
+
+            </select>
         </div>
-    <p>
-     <br>
-    <button type="submit" class="btn btn-primary">Hinzufügen</button>
-    </p>
+            <div class="row justify-content-center">
+        <div class="col-5">
+            <label for="Gefahrenstufe" class="form-label">Gefahrenstufe</label>
+            <select id="gefahrenstufe" name="gefahrenstufe" class="form-select">
+                <option selected>Wählen</option>
+                <option value="1">Level 1</option>
+                <option value="2">Level 2</option>
+                <option value="3">Level 3</option>
+                <option value="4">Level 4</option>
+                <option value="5">Level 5</option>
+            </select>
+        </div>
+
+        <div class="col-5">
+            <label for="erreichbarkeit" class="form-label">Erreichbarkeit mit ÖV</label>
+            <select id="erreichbarkeit" name="erreichbarkeit" class="form-select">
+                <option selected>Wählen</option>
+                <option value="1">Ja</option>
+                <option value="0">Nein</option>
+            </select>
+        </div>
+        <p>
+            <br>
+            <button type="submit" class="btn btn-primary">Hinzufügen</button>
+        </p>
+    </div>
 </form>
 
-{% include "footer.jinja" %}
+    {% include "footer.jinja" %}

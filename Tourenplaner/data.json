@@ -1,85 +1,98 @@
 {
-    "Tour 1" : {
+    "Tour 1": {
         "dauer": 1,
         "tiefenmeter": 400,
-        "höhenmeter": 600,
-        "Technische Schwierigkeit": 4,
-        "Gefahrenstufe": 4,
-        "Erreichbarkeit mit ÖV": "Ja"
+        "hoehenmeter": 600,
+        "schwierigkeit": 4,
+        "gefahrenstufe": 4,
+        "erreichbarkeit": 1
     },
-        "Tour 2" : {
+    "Tour 2": {
         "dauer": 1.5,
         "tiefenmeter": 550,
-        "höhenmeter": 650,
-        "Technische Schwierigkeit": 3,
-        "Gefahrenstufe": 1,
-        "Erreichbarkeit mit ÖV": "Ja"
+        "hoehenmeter": 650,
+        "schwierigkeit": 3,
+        "gefahrenstufe": 1,
+        "erreichbarkeit": 1
     },
-
-    "Tour 3" : {
+    "Tour 3": {
         "dauer": 2,
         "tiefenmeter": 1000,
-        "höhenmeter": 1005,
-        "Technische Schwierigkeit": 2,
-        "Gefahrenstufe": 2,
-        "Erreichbarkeit mit ÖV": "Nein"
+        "hoehenmeter": 1005,
+        "schwierigkeit": 2,
+        "gefahrenstufe": 2,
+        "erreichbarkeit": 0
     },
-    "Tour 4" : {
+    "Tour 4": {
         "dauer": 2.5,
         "tiefenmeter": 1200,
-        "höhenmeter": 1150,
-        "Technische Schwierigkeit": 2,
-        "Gefahrenstufe": 3,
-        "Erreichbarkeit mit ÖV": "Ja"
+        "hoehenmeter": 1150,
+        "schwierigkeit": 2,
+        "gefahrenstufe": 3,
+        "erreichbarkeit": 1
     },
-
-    "Tour 5" : {
+    "Tour 5": {
         "dauer": 2.5,
         "tiefenmeter": 1500,
-        "höhenmeter": 1450,
-        "Technische Schwierigkeit": 3,
-        "Gefahrenstufe": 4,
-        "Erreichbarkeit mit ÖV": "Nein"
+        "hoehenmeter": 1450,
+        "schwierigkeit": 3,
+        "gefahrenstufe": 4,
+        "erreichbarkeit": 0
     },
-    "Tour 6" : {
+    "Tour 6": {
         "dauer": 3,
         "tiefenmeter": 1760,
-        "höhenmeter": 1750,
-        "Technische Schwierigkeit": 4,
-        "Gefahrenstufe": 2,
-        "Erreichbarkeit mit ÖV": "Ja"
+        "hoehenmeter": 1750,
+        "schwierigkeit": 4,
+        "gefahrenstufe": 2,
+        "erreichbarkeit": 1
     },
-    "Tour 7" : {
+    "Tour 7": {
         "dauer": 3,
         "tiefenmeter": 1900,
-        "höhenmeter": 1700,
-        "Technische Schwierigkeit": 3,
-        "Gefahrenstufe": 2,
-        "Erreichbarkeit mit ÖV": "Ja"
+        "hoehenmeter": 1700,
+        "schwierigkeit": 3,
+        "gefahrenstufe": 2,
+        "erreichbarkeit": 1
     },
-    "Tour 8" : {
+    "Tour 8": {
         "dauer": 4,
         "tiefenmeter": 1400,
-        "höhenmeter": 1360,
-        "Technische Schwierigkeit": 5,
-        "Gefahrenstufe": 4,
-        "Erreichbarkeit mit ÖV": "Nein"
+        "hoehenmeter": 1360,
+        "schwierigkeit": 5,
+        "gefahrenstufe": 4,
+        "erreichbarkeit": 0
     },
-    "Tour 9" : {
+    "Tour 9": {
         "dauer": 4.25,
         "tiefenmeter": 1650,
-        "höhenmeter": 1700,
-        "Technische Schwierigkeit": 4,
-        "Gefahrenstufe": 5,
-        "Erreichbarkeit mit ÖV": "Nein"
+        "hoehenmeter": 1700,
+        "schwierigkeit": 4,
+        "gefahrenstufe": 5,
+        "erreichbarkeit": 0
     },
-    "Tour 10" : {
+    "Tour 10": {
         "dauer": 5.5,
         "tiefenmeter": 2000,
-        "höhenmeter": 1800,
-        "Technische Schwierigkeit": 3,
-        "Gefahrenstufe": 4,
-        "Erreichbarkeit mit ÖV": "Nein"
+        "hoehenmeter": 1800,
+        "schwierigkeit": 3,
+        "gefahrenstufe": 4,
+        "erreichbarkeit": 0
+    },
+    "Test2": {
+        "gefahrenstufe": "1",
+        "erreichbarkeit": "1",
+        "hoehenmeter": "500",
+        "tiefenmeter": "600",
+        "dauer": "<1",
+        "schwierigkeit": "1"
+    },
+    "test3": {
+        "gefahrenstufe": "2",
+        "erreichbarkeit": "1",
+        "hoehenmeter": "1000",
+        "tiefenmeter": "1000",
+        "dauer": "1",
+        "schwierigkeit": "2"
     }
-
-   }
+}

@@ -1,7 +1,11 @@
 {% include "header.jinja" %}
 
 <body>
-
+{% if selection %}
+{% for name, data in selection.items() %}
+    name, data
+{% endfor %}
+{% endif %}
 
 <!-- Dauer -->
     <form method="POST" class="row justify-content-center">
@@ -31,24 +35,24 @@
 <!-- Höhenmeter -->
          <h5> Höhenmeter </h5>
        <div class="input-group mb-3">
-             <input name="höhenmeter" id="f" class="form-check-input mt-0" type="radio" value="500" aria-label="Checkbox for following text">
+             <input name="hoehenmeter" id="f" class="form-check-input mt-0" type="radio" value="500" aria-label="Checkbox for following text">
              <h6>  <500 Höhenmeter </h6>
         </div>
         <div class="input-group mb-3">
-             <input name="höhenmeter" id="g" class="form-check-input mt-0" type="radio" value="1000" aria-label="Checkbox for following text">
+             <input name="hoehenmeter" id="g" class="form-check-input mt-0" type="radio" value="1000" aria-label="Checkbox for following text">
              <h6> bis 1000 Höhenmeter </h6>
         </div>
         <div class="input-group mb-3">
-             <input name="höhenmeter" id="h" class="form-check-input mt-0" type="radio" value="1500" aria-label="Checkbox for following text">
+             <input name="hoehenmeter" id="h" class="form-check-input mt-0" type="radio" value="1500" aria-label="Checkbox for following text">
              <h6> bis 1500 Höhenmeter </h6>
         </div>
         <div class="input-group mb-3">
-             <input name="höhenmeter" id="i" class="form-check-input mt-0" type="radio" value="2000" aria-label="Checkbox for following text">
+             <input name="hoehenmeter" id="i" class="form-check-input mt-0" type="radio" value="2000" aria-label="Checkbox for following text">
              <h6> bis 2000 Höhenmeter </h6>
         </div>
         <div class="input-group mb-3">
-             <input name="höhenmeter" id="j"  class="form-check-input mt-0" type="radio" value="" aria-label="Checkbox for following text">
-             <h6>  Höhenmeter spielen keine Rolle </h6>
+             <input name="hoehenmeter" id="j"  class="form-check-input mt-0" type="radio" value="3000" aria-label="Checkbox for following text">
+             <h6>  bis 3000 Höhenmeter </h6>
         </div>
 
 <!-- Tiefenmeter -->
@@ -70,44 +74,44 @@
              <h6>  bis 2000 Tiefenmeter </h6>
         </div>
         <div class="input-group mb-3">
-             <input name="tiefenmeter" id="o" class="form-check-input mt-0" type="radio" value="" aria-label="Checkbox for following text">
-             <h6> Tiefenmeter spielen keine Rolle  </h6>
+             <input name="tiefenmeter" id="o" class="form-check-input mt-0" type="radio" value="3000" aria-label="Checkbox for following text">
+             <h6> bis 3000 Höhenmeter  </h6>
         </div>
 
 <!-- Technische Schwierigkeit -->
          <h5> Technische Schwierigkeit</h5>
        <div class="input-group mb-3">
-             <input name="Schwierigkeit" id="p" class="form-check-input mt-0" type="radio" value="0" aria-label="Checkbox for following text">
+             <input name="schwierigkeit" id="p" class="form-check-input mt-0" type="radio" value="1" aria-label="Checkbox for following text">
              <h6> Level 1 </h6>
         </div>
         <div class="input-group mb-3">
-             <input name="Schwierigkeit" id="q" class="form-check-input mt-0" type="radio" value="1" aria-label="Checkbox for following text">
+             <input name="schwierigkeit" id="q" class="form-check-input mt-0" type="radio" value="2" aria-label="Checkbox for following text">
              <h6> Level 2 </h6>
         </div>
         <div class="input-group mb-3">
-             <input name="Schwierigkeit" id="r" class="form-check-input mt-0" type="radio" value="2" aria-label="Checkbox for following text">
+             <input name="schwierigkeit" id="r" class="form-check-input mt-0" type="radio" value="3" aria-label="Checkbox for following text">
              <h6> Level 3 </h6>
         </div>
         <div class="input-group mb-3">
-             <input name="Schwierigkeit" id="s" class="form-check-input mt-0" type="radio" value="3" aria-label="Checkbox for following text">
+             <input name="schwierigkeit" id="s" class="form-check-input mt-0" type="radio" value="4" aria-label="Checkbox for following text">
              <h6>  Level 4  </h6>
         </div>
         <div class="input-group mb-3">
-             <input name="Schwierigkeit" id="t" class="form-check-input mt-0" type="radio" value="4" aria-label="Checkbox for following text">
+             <input name="schwierigkeit" id="t" class="form-check-input mt-0" type="radio" value="5" aria-label="Checkbox for following text">
              <h6>  Level 5 </h6>
         </div>
         <div class="input-group mb-3">
-             <input name="Schwierigkeit" id="tt" class="form-check-input mt-0" type="radio" value="" aria-label="Checkbox for following text">
+             <input name="schwierigkeit" id="tt" class="form-check-input mt-0" type="radio" value="" aria-label="Checkbox for following text">
              <h6>  Schwierigkeit spielt keine Rolle  </h6>
         </div>
 <!-- Erreichbarkeit mit ÖV -->
          <h5> Erreichbarkeit mit der ÖV</h5>
        <div class="input-group mb-3">
-             <input name="Erreichbarkeit mit ÖV" id="u" class="form-check-input mt-0" type="radio" value="1" aria-label="Checkbox for following text">
+             <input name="erreichbarkeit" id="erreichbar" class="form-check-input mt-0" type="radio" value="1" aria-label="Checkbox for following text">
              <h6>  Erreichbar mit der ÖV </h6>
         </div>
         <div class="input-group mb-3">
-             <input name="Erreichbarkeit mit ÖV" id="v" class="form-check-input mt-0" type="radio" value="" aria-label="Checkbox for following text">
+             <input name="erreichbarkeit" id="unerreichbar" class="form-check-input mt-0" type="radio" value="0" aria-label="Checkbox for following text">
              <h6> Nicht erreichbar mit der ÖV </h6>
         </div>
 
@@ -117,30 +121,30 @@
         <h5> Gefahrenstufe</h5>
 
        <div class="input-group mb-3">
-             <input name ="Gefahrenstufe" id ="w" class="form-check-input mt-0" type="radio" value="0" >
+             <input name ="gefahrenstufe" id ="w" class="form-check-input mt-0" type="radio" value="1" >
              <h6>  Level 1 </h6>
        </div>
 
         <div class="input-group mb-3">
-             <input name ="Gefahrenstufe" id ="ww" class="form-check-input mt-0" type="radio" value="1" >
+             <input name ="gefahrenstufe" id ="ww" class="form-check-input mt-0" type="radio" value="2" >
              <h6>  Level 2 </h6>
         </div>
 
         <div class="input-group mb-3">
-             <input name ="Gefahrenstufe" id ="www" class="form-check-input mt-0" type="radio" value="2" >
+             <input name ="gefahrenstufe" id ="www" class="form-check-input mt-0" type="radio" value="3" >
              <h6> Level 3 </h6>
         </div>
 
         <div class="input-group mb-3">
-             <input name ="Gefahrenstufe" id ="wwww" class="form-check-input mt-0" type="radio" value="3" >
+             <input name ="gefahrenstufe" id ="wwww" class="form-check-input mt-0" type="radio" value="4" >
              <h6> Level 4 </h6>
         </div>
         <div class="input-group mb-3">
-             <input name ="Gefahrenstufe" id ="wwx" class="form-check-input mt-0" type="radio" value="4" >
+             <input name ="gefahrenstufe" id ="wwx" class="form-check-input mt-0" type="radio" value="5" >
              <h6> Level 5 </h6>
         </div>
         <div class="input-group mb-3">
-             <input name ="Gefahrenstufe" id ="wwxx" class="form-check-input mt-0" type="radio" value="" >
+             <input name ="gefahrenstufe" id ="wwxx" class="form-check-input mt-0" type="radio" value="" >
              <h6> Gefahrenstufe spielt keine Rolle </h6>
         </div>
 <!-- Button 'Touren anzeigen' -->
