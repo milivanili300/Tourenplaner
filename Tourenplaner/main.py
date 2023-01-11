@@ -39,7 +39,6 @@ def start():
                                     }
     return render_template('kategorisierung.html', selection=selection)
 
-
 @app.route("/add", methods=["GET", "POST"])
 def add_new_tour():
 
