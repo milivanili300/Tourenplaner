@@ -11,16 +11,17 @@ app = Flask("Tourenplaner")
 
 @app.route("/", methods=["GET", "POST"])
 def start():
-    selection = {}
+    selection = None;
 
     if request.method == "POST":
+        selection = {};
         touren = auslesen()
-        dauer = request.form["dauer"]
-        hoehenmeter = request.form["hoehenmeter"]
-        tiefenmeter = request.form["tiefenmeter"]
-        schwierigkeit = request.form["schwierigkeit"]
-        erreichbarkeit = request.form["erreichbarkeit"]
-        gefahrenstufe = request.form["gefahrenstufe"]
+        dauer = request.form.get("dauer")
+        hoehenmeter = request.form.get("hoehenmeter");
+        tiefenmeter = request.form.get("tiefenmeter");
+        schwierigkeit = request.form.get("schwierigkeit");
+        erreichbarkeit = request.form.get("erreichbarkeit");
+        gefahrenstufe = request.form.get("gefahrenstufe");
 
         for key, value in touren.items():
             if value["hoehenmeter"] == hoehenmeter:
@@ -29,7 +30,7 @@ def start():
                         if value["schwierigkeit"] == schwierigkeit:
                             if value["gefahrenstufe"] == gefahrenstufe:
                                 if value["erreichbarkeit"] == erreichbarkeit:
-                                    selection[touren] = {
+                                    selection[key] = {
                                         "dauer": dauer,
                                         "tiefenmeter": tiefenmeter,
                                         "hoehenmeter": hoehenmeter,
