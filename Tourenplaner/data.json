@@ -110,5 +110,13 @@
         "tiefenmeter": "600",
         "dauer": "<1",
         "schwierigkeit": "1"
+    },
+    "12": {
+        "gefahrenstufe": "1",
+        "erreichbarkeit": "1",
+        "hoehenmeter": "500",
+        "tiefenmeter": "600",
+        "dauer": "<1",
+        "schwierigkeit": "1"
     }
 }
