@@ -1,11 +1,13 @@
 {% include "header.jinja" %}
 
 <body>
-{% if selection %}
+{% if selection == [] %}
 {% for name, data in selection.items() %}
-    <div>{{ name }}</div>
+    name
 {% endfor %}
 {% endif %}
+
+<h3> Suchst du noch die Perfekte Skitour? Klicke die Boxen an und wir schlagen sie dir vor</h3>
 
 <!-- Dauer -->
     <form method="POST" class="row justify-content-center">

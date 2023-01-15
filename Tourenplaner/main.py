@@ -1,6 +1,7 @@
 from flask import Flask
 from flask import render_template
 from flask import request
+
 import plotly.express as px
 from plotly.offline import plot
 
@@ -19,9 +20,9 @@ def start():
         dauer = request.form.get("dauer")
         hoehenmeter = request.form.get("hoehenmeter")
         tiefenmeter = request.form.get("tiefenmeter")
-        schwierigkeit = request.form.get("schwierigkeit");
-        erreichbarkeit = request.form.get("erreichbarkeit");
-        gefahrenstufe = request.form.get("gefahrenstufe");
+        schwierigkeit = request.form.get("schwierigkeit")
+        erreichbarkeit = request.form.get("erreichbarkeit")
+        gefahrenstufe = request.form.get("gefahrenstufe")
 
         for key, value in touren.items():
             if value["hoehenmeter"] == hoehenmeter:
@@ -39,6 +40,7 @@ def start():
                                         "erreichbarkeit": erreichbarkeit
                                     }
     return render_template('kategorisierung.html', selection=selection)
+
 
 @app.route("/add", methods=["GET", "POST"])
 def add_new_tour():

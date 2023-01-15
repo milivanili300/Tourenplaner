@@ -1,5 +1,5 @@
 {
-    "Tour 1": {
+    "Lauberhorn": {
         "dauer": "1",
         "tiefenmeter": "400",
         "hoehenmeter": "600",
@@ -7,7 +7,7 @@
         "gefahrenstufe": "4",
         "erreichbarkeit": "1"
     },
-    "Tour 2": {
+    "Rothorn": {
         "dauer": "1.5",
         "tiefenmeter": "550",
         "hoehenmeter": "650",
@@ -15,7 +15,7 @@
         "gefahrenstufe": "1",
         "erreichbarkeit": "1"
     },
-    "Tour 3": {
+    "Weisshorn": {
         "dauer": "2",
         "tiefenmeter": "1000",
         "hoehenmeter": "1005",
@@ -23,7 +23,7 @@
         "gefahrenstufe": "2",
         "erreichbarkeit": "0"
     },
-    "Tour 4": {
+    "Piz Linard": {
         "dauer": "2.5",
         "tiefenmeter": "1200",
         "hoehenmeter": "1150",
@@ -31,7 +31,7 @@
         "gefahrenstufe": "3",
         "erreichbarkeit": "1"
     },
-    "Tour 5": {
+    "Montalin": {
         "dauer": "2.5",
         "tiefenmeter": "1500",
         "hoehenmeter": "1450",
@@ -39,7 +39,7 @@
         "gefahrenstufe": "4",
         "erreichbarkeit": "0"
     },
-    "Tour 6": {
+    "Mittenberg": {
         "dauer": "3",
         "tiefenmeter": "1760",
         "hoehenmeter": "1750",
@@ -47,7 +47,7 @@
         "gefahrenstufe": "2",
         "erreichbarkeit": "1"
     },
-    "Tour 7": {
+    "G\u00c3\u00a4msstock": {
         "dauer": "3",
         "tiefenmeter": "1900",
         "hoehenmeter": "1700",
@@ -55,7 +55,7 @@
         "gefahrenstufe": "2",
         "erreichbarkeit": "1"
     },
-    "Tour 8": {
+    "Riederalp": {
         "dauer": 4,
         "tiefenmeter": 1400,
         "hoehenmeter": 1360,
@@ -63,7 +63,7 @@
         "gefahrenstufe": 4,
         "erreichbarkeit": 0
     },
-    "Tour 9": {
+    "Pilatus": {
         "dauer": 4.25,
         "tiefenmeter": 1650,
         "hoehenmeter": 1700,
@@ -71,7 +71,7 @@
         "gefahrenstufe": 5,
         "erreichbarkeit": 0
     },
-    "Tour 10": {
+    "Rigi": {
         "dauer": "5.5",
         "tiefenmeter": "2000",
         "hoehenmeter": "1800",
@@ -79,7 +79,7 @@
         "gefahrenstufe": "4",
         "erreichbarkeit": "0"
     },
-    "Test2": {
+    "Piz Scalottas": {
         "gefahrenstufe": "1",
         "erreichbarkeit": "1",
         "hoehenmeter": "500",
@@ -87,36 +87,12 @@
         "dauer": "<1",
         "schwierigkeit": "1"
     },
-    "test3": {
+    "Ochsenalp": {
         "gefahrenstufe": "2",
         "erreichbarkeit": "1",
-        "hoehenmeter": "1000",
-        "tiefenmeter": "1000",
-        "dauer": "1",
+        "hoehenmeter": "500",
+        "tiefenmeter": "600",
+        "dauer": "<1",
         "schwierigkeit": "2"
-    },
-    "test 11.": {
-        "gefahrenstufe": "1",
-        "erreichbarkeit": "1",
-        "hoehenmeter": "500",
-        "tiefenmeter": "600",
-        "dauer": "<1",
-        "schwierigkeit": "1"
-    },
-    "Gr\u00fcenstock": {
-        "gefahrenstufe": "1",
-        "erreichbarkeit": "1",
-        "hoehenmeter": "500",
-        "tiefenmeter": "600",
-        "dauer": "<1",
-        "schwierigkeit": "1"
-    },
-    "12": {
-        "gefahrenstufe": "1",
-        "erreichbarkeit": "1",
-        "hoehenmeter": "500",
-        "tiefenmeter": "600",
-        "dauer": "<1",
-        "schwierigkeit": "1"
     }
 }
