@@ -1,10 +1,12 @@
 {% include "header.jinja" %}
 
 <body>
-{% if selection %}
-{% for name, data in selection.items() %}
-    <div>{{ name }}</div>
+{% if vorschlag %}
+{% for name, data in vorschlag.items() %}
+<form method="POST" action="{{ url_for('selection') }}">
+    <div>{{ name, data }}</div>
 {% endfor %}
+</form>
 {% endif %}
 
 

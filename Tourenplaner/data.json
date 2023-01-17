@@ -110,5 +110,21 @@
         "tiefenmeter": "600",
         "dauer": "<1",
         "schwierigkeit": "1"
+    },
+    "Affenberg": {
+        "gefahrenstufe": "5",
+        "erreichbarkeit": "1",
+        "hoehenmeter": "1000",
+        "tiefenmeter": "1500",
+        "dauer": "1",
+        "schwierigkeit": "2"
+    },
+    "Schuldenberg": {
+        "gefahrenstufe": "5",
+        "erreichbarkeit": "0",
+        "hoehenmeter": "3000",
+        "tiefenmeter": "3000",
+        "dauer": "3",
+        "schwierigkeit": "5"
     }
 }

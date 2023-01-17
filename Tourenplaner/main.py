@@ -15,8 +15,6 @@ app = Flask("Tourenplaner")
 # Erstellung der Startseite, bei welcher Touren gefiltert werden können
 @app.route("/", methods=["GET", "POST"])
 def start():
-    selection = {}
-
     if request.method == "POST":
         dauer = request.form["dauer"]
         hoehenmeter = request.form["hoehenmeter"]
@@ -24,32 +22,33 @@ def start():
         schwierigkeit = request.form["schwierigkeit"]
         erreichbarkeit = request.form["erreichbarkeit"]
         gefahrenstufe = request.form["gefahrenstufe"]
-        # Code welcher die Daten aus Json abruft
-        with open("data.json") as datei:
-            selection = json.load(datei)
-            print(selection)
+        # Code, welcher die Daten aus Json abruft
         # gegenprüfen von eingabe und daten in json
         # leere Liste für die Touren welche mit den gesetzten Radios übereinstimmen wird erstellt
-        auswahl = []
-        for key, value in selection.items():
+        with open("data.json") as datei:
+            vorschlag = json.load(datei)
+        selection = []
+        for key, value in vorschlag.items():
             if hoehenmeter == value["hoehenmeter"]:
                 if dauer == value["dauer"]:
                     if tiefenmeter == value["tiefenmeter"]:
                         if schwierigkeit == value["schwierigkeit"]:
                             if gefahrenstufe == value["gefahrenstufe"]:
                                 if erreichbarkeit == value["erreichbarkeit"]:
-                                    auswahl.append(key, value)
-                                    # wenn die ausgewählten Eigenschaften mit den Touren übereinstimmen werden sie in
-                                    # die Liste auswahl gespeichert
+                                    # wenn die ausgewählten Eigenschaften mit den Touren übereinstimmen werden
+                                    # sie in die Liste auswahl gespeichert
+                                    selection.append(key)
+                                    selection.append(value)
+                                    print(selection)
 
-            return render_template("index.html", selection=selection, auswahl=auswahl)
-            # Neue Seite wird geöffnet die nur die gewollten Touren anzeigt
+        return render_template("index.html", selection=selection)
+        # Neue Seite wird geöffnet die nur die gewollten Touren anzeigt
 
-    return render_template('kategorisierung.html', selection=selection)
-
+    return render_template('kategorisierung.html')
 # Code für Auswahl und Darstellung der Touren fertig, Touren die mit Dict. übereinstimmen werden dargestellt
-
 # Code für die Erstellung einer neuen Tour fängt hier an.
+
+
 @app.route("/add", methods=["GET", "POST"])
 def add_new_tour():
     if request.method == "POST":
