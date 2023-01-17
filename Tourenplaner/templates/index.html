@@ -1,11 +1,13 @@
 {% include "header.jinja" %}
-{% for eintrag in liste %}
-  <div class="card" style="width: 18rem;">
-    <div class="card-body">
-      <h5 class="card-title">{{ eintrag[1] }}</h5>
-      <p class="card-text">{{ eintrag[0] }}</p>
-    </div>
-  </div>
 
+<body>
+{% if selection %}
+{% for name, data in selection.items() %}
+    <div>{{ name }}</div>
 {% endfor %}
+{% endif %}
+
+
+</body>
+
 {% include "footer.jinja" %}

@@ -1,3 +1,5 @@
+import json
+
 from flask import Flask
 from flask import render_template
 from flask import request
@@ -10,41 +12,46 @@ from datenbank import abspeichern, auslesen
 app = Flask("Tourenplaner")
 
 
+# Erstellung der Startseite, bei welcher Touren gefiltert werden können
 @app.route("/", methods=["GET", "POST"])
 def start():
-    selection = None
+    selection = {}
 
     if request.method == "POST":
-        selection = {}
-        touren = auslesen()
-        dauer = request.form.get("dauer")
-        hoehenmeter = request.form.get("hoehenmeter")
-        tiefenmeter = request.form.get("tiefenmeter")
-        schwierigkeit = request.form.get("schwierigkeit")
-        erreichbarkeit = request.form.get("erreichbarkeit")
-        gefahrenstufe = request.form.get("gefahrenstufe")
+        dauer = request.form["dauer"]
+        hoehenmeter = request.form["hoehenmeter"]
+        tiefenmeter = request.form["tiefenmeter"]
+        schwierigkeit = request.form["schwierigkeit"]
+        erreichbarkeit = request.form["erreichbarkeit"]
+        gefahrenstufe = request.form["gefahrenstufe"]
+        # Code welcher die Daten aus Json abruft
+        with open("data.json") as datei:
+            selection = json.load(datei)
+            print(selection)
+        # gegenprüfen von eingabe und daten in json
+        # leere Liste für die Touren welche mit den gesetzten Radios übereinstimmen wird erstellt
+        auswahl = []
+        for key, value in selection.items():
+            if hoehenmeter == value["hoehenmeter"]:
+                if dauer == value["dauer"]:
+                    if tiefenmeter == value["tiefenmeter"]:
+                        if schwierigkeit == value["schwierigkeit"]:
+                            if gefahrenstufe == value["gefahrenstufe"]:
+                                if erreichbarkeit == value["erreichbarkeit"]:
+                                    auswahl.append(key, value)
+                                    # wenn die ausgewählten Eigenschaften mit den Touren übereinstimmen werden sie in
+                                    # die Liste auswahl gespeichert
 
-        for key, value in touren.items():
-            if value["hoehenmeter"] == hoehenmeter:
-                if value["dauer"] == dauer:
-                    if value["tiefenmeter"] == tiefenmeter:
-                        if value["schwierigkeit"] == schwierigkeit:
-                            if value["gefahrenstufe"] == gefahrenstufe:
-                                if value["erreichbarkeit"] == erreichbarkeit:
-                                    selection[key] = {
-                                        "dauer": dauer,
-                                        "tiefenmeter": tiefenmeter,
-                                        "hoehenmeter": hoehenmeter,
-                                        "schwierigkeit": schwierigkeit,
-                                        "gefahrenstufe": gefahrenstufe,
-                                        "erreichbarkeit": erreichbarkeit
-                                    }
+            return render_template("index.html", selection=selection, auswahl=auswahl)
+            # Neue Seite wird geöffnet die nur die gewollten Touren anzeigt
+
     return render_template('kategorisierung.html', selection=selection)
 
+# Code für Auswahl und Darstellung der Touren fertig, Touren die mit Dict. übereinstimmen werden dargestellt
 
+# Code für die Erstellung einer neuen Tour fängt hier an.
 @app.route("/add", methods=["GET", "POST"])
 def add_new_tour():
-
     if request.method == "POST":
         name = request.form["Name der Tour"]
         gefahrenstufe = request.form['gefahrenstufe']
@@ -53,7 +60,7 @@ def add_new_tour():
         tiefenmeter = request.form['tiefenmeter']
         dauer = request.form['dauer']
         schwierigkeit = request.form['schwierigkeit']
-
+        # Code welcher vorgibt, wie Eingaben in Data als Dict. abgespeichert werden soll.
         tour = {
             'gefahrenstufe': gefahrenstufe,
             'erreichbarkeit': oev,
@@ -67,9 +74,12 @@ def add_new_tour():
     return render_template("neue_tour.html")
 
 
-@app.route("/overview")
-def grafik():
-    return "nope"
+# @app.route("/overview", methods=['GET'])
+# def overview():
+# with open("data.json", "r") as file:
+#   data = json.load(file)
+#  print(data)
+# return render_template("overview.html", seitentitel="Overview", data=data)
 
 
 if __name__ == "__main__":

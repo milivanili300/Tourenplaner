@@ -47,7 +47,7 @@
         "gefahrenstufe": "2",
         "erreichbarkeit": "1"
     },
-    "G\u00c3\u00a4msstock": {
+    "Gamsstock": {
         "dauer": "3",
         "tiefenmeter": "1900",
         "hoehenmeter": "1700",
@@ -94,5 +94,21 @@
         "tiefenmeter": "600",
         "dauer": "<1",
         "schwierigkeit": "2"
+    },
+    "Testgipfel": {
+        "gefahrenstufe": "1",
+        "erreichbarkeit": "1",
+        "hoehenmeter": "500",
+        "tiefenmeter": "600",
+        "dauer": "<1",
+        "schwierigkeit": "1"
+    },
+    "Neuberg": {
+        "gefahrenstufe": "1",
+        "erreichbarkeit": "1",
+        "hoehenmeter": "500",
+        "tiefenmeter": "600",
+        "dauer": "<1",
+        "schwierigkeit": "1"
     }
 }
