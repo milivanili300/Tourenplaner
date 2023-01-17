@@ -41,7 +41,7 @@ def start():
                                     selection.append(value)
                                     print(selection)
 
-        return render_template("index.html", selection=selection)
+        return render_template("index.html", selection=selection, liste=selection)
         # Neue Seite wird geöffnet die nur die gewollten Touren anzeigt
 
     return render_template('kategorisierung.html')

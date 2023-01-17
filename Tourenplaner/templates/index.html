@@ -1,14 +1,16 @@
 {% include "header.jinja" %}
 
 <body>
-{% if vorschlag %}
-{% for name, data in vorschlag.items() %}
-<form method="POST" action="{{ url_for('selection') }}">
-    <div>{{ name, data }}</div>
-{% endfor %}
-</form>
-{% endif %}
 
+
+<div>
+    {% for eintrag in liste %}
+
+    <h1>
+        {{eintrag}}
+    </h1>
+    {% endfor %}
+</div>
 
 </body>
 
