@@ -118,5 +118,13 @@
         "tiefenmeter": "1000",
         "dauer": "2",
         "schwierigkeit": "4"
+    },
+    "Projektspitze": {
+        "gefahrenstufe": "2",
+        "erreichbarkeit": "0",
+        "hoehenmeter": "3000",
+        "tiefenmeter": "2000",
+        "dauer": "1",
+        "schwierigkeit": "3"
     }
 }
