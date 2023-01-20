@@ -2,16 +2,23 @@
 
 <body>
 
-
 <div>
+
     {% for eintrag in liste %}
 
-    <h1>
+    <h4>
         {{eintrag}}
-    </h1>
+    </h4>
+    <br>
     {% endfor %}
 </div>
-
+<div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h7> Keine Tour angezeigt? dann gibt es noch keine Tour mit den Eigenschaften. Versuch es doch nochmals oder füge eine eigene Tour hinzu. </h7>
+</div>
 </body>
 
 {% include "footer.jinja" %}

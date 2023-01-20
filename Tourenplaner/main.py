@@ -3,11 +3,7 @@ import json
 from flask import Flask
 from flask import render_template
 from flask import request
-
-import plotly.express as px
-from plotly.offline import plot
-
-from datenbank import abspeichern, auslesen
+from datenbank import abspeichern
 
 app = Flask("Tourenplaner")
 
@@ -22,12 +18,12 @@ def start():
         schwierigkeit = request.form["schwierigkeit"]
         erreichbarkeit = request.form["erreichbarkeit"]
         gefahrenstufe = request.form["gefahrenstufe"]
-        # Code, welcher die Daten aus Json abruft
-        # gegenprüfen von eingabe und daten in json
-        # leere Liste für die Touren welche mit den gesetzten Radios übereinstimmen wird erstellt
+        # Code, welcher die Daten mit Kategorisierung abgleicht.
         with open("data.json") as datei:
             vorschlag = json.load(datei)
+        # leere Liste für die Touren welche mit der gesetzten Auswahl übereinstimmt, wird erstellt
         selection = []
+        # gegenprüfung jeder Eingabe mit Json datei welche bestehende Touren beinhaltet.
         for key, value in vorschlag.items():
             if hoehenmeter == value["hoehenmeter"]:
                 if dauer == value["dauer"]:
@@ -36,15 +32,15 @@ def start():
                             if gefahrenstufe == value["gefahrenstufe"]:
                                 if erreichbarkeit == value["erreichbarkeit"]:
                                     # wenn die ausgewählten Eigenschaften mit den Touren übereinstimmen werden
-                                    # sie in die Liste auswahl gespeichert
+                                    # sie in die Liste selection gespeichert
                                     selection.append(key)
                                     selection.append(value)
-                                    print(selection)
-
-        return render_template("index.html", selection=selection, liste=selection)
-        # Neue Seite wird geöffnet die nur die gewollten Touren anzeigt
+        return render_template("index.html", liste=selection)
+        # Neue Seite wird geöffnet die nur die übereinstimmenden Touren anzeigt
 
     return render_template('kategorisierung.html')
+
+
 # Code für Auswahl und Darstellung der Touren fertig, Touren die mit Dict. übereinstimmen werden dargestellt
 # Code für die Erstellung einer neuen Tour fängt hier an.
 
@@ -52,6 +48,7 @@ def start():
 @app.route("/add", methods=["GET", "POST"])
 def add_new_tour():
     if request.method == "POST":
+        # Eigentlich wie bei der Tour aussuchen, können die Eigenschaften der Tour angegeben werden.
         name = request.form["Name der Tour"]
         gefahrenstufe = request.form['gefahrenstufe']
         oev = request.form['erreichbarkeit']
@@ -68,17 +65,11 @@ def add_new_tour():
             'dauer': dauer,
             'schwierigkeit': schwierigkeit,
         }
+        # durch die in datenbank.py definierte Funktion, wird die Tour und der Name in Json mit den restlichen Touren
+        # abgespeichert.
         abspeichern(name, tour)
-
+    # neue_tour.html wird nach jedem abspeichern wieder geöffnet, damit weitere Touren eingeben werden können.
     return render_template("neue_tour.html")
-
-
-# @app.route("/overview", methods=['GET'])
-# def overview():
-# with open("data.json", "r") as file:
-#   data = json.load(file)
-#  print(data)
-# return render_template("overview.html", seitentitel="Overview", data=data)
 
 
 if __name__ == "__main__":

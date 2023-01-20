@@ -98,7 +98,6 @@ venv.bak/
 .spyproject
 
 # PyCharm project settings
-.idea/
 
 # Rope project settings
 .ropeproject

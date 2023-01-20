@@ -1,92 +1,4 @@
 {
-    "Lauberhorn": {
-        "dauer": "1",
-        "tiefenmeter": "400",
-        "hoehenmeter": "600",
-        "schwierigkeit": "4",
-        "gefahrenstufe": "4",
-        "erreichbarkeit": "1"
-    },
-    "Rothorn": {
-        "dauer": "1.5",
-        "tiefenmeter": "550",
-        "hoehenmeter": "650",
-        "schwierigkeit": "3",
-        "gefahrenstufe": "1",
-        "erreichbarkeit": "1"
-    },
-    "Weisshorn": {
-        "dauer": "2",
-        "tiefenmeter": "1000",
-        "hoehenmeter": "1005",
-        "schwierigkeit": "2",
-        "gefahrenstufe": "2",
-        "erreichbarkeit": "0"
-    },
-    "Piz Linard": {
-        "dauer": "2.5",
-        "tiefenmeter": "1200",
-        "hoehenmeter": "1150",
-        "schwierigkeit": "2",
-        "gefahrenstufe": "3",
-        "erreichbarkeit": "1"
-    },
-    "Montalin": {
-        "dauer": "2.5",
-        "tiefenmeter": "1500",
-        "hoehenmeter": "1450",
-        "schwierigkeit": "3",
-        "gefahrenstufe": "4",
-        "erreichbarkeit": "0"
-    },
-    "Mittenberg": {
-        "dauer": "3",
-        "tiefenmeter": "1760",
-        "hoehenmeter": "1750",
-        "schwierigkeit": "4",
-        "gefahrenstufe": "2",
-        "erreichbarkeit": "1"
-    },
-    "Gamsstock": {
-        "dauer": "3",
-        "tiefenmeter": "1900",
-        "hoehenmeter": "1700",
-        "schwierigkeit": "3",
-        "gefahrenstufe": "2",
-        "erreichbarkeit": "1"
-    },
-    "Riederalp": {
-        "dauer": 4,
-        "tiefenmeter": 1400,
-        "hoehenmeter": 1360,
-        "schwierigkeit": 5,
-        "gefahrenstufe": 4,
-        "erreichbarkeit": 0
-    },
-    "Pilatus": {
-        "dauer": 4.25,
-        "tiefenmeter": 1650,
-        "hoehenmeter": 1700,
-        "schwierigkeit": 4,
-        "gefahrenstufe": 5,
-        "erreichbarkeit": 0
-    },
-    "Rigi": {
-        "dauer": "5.5",
-        "tiefenmeter": "2000",
-        "hoehenmeter": "1800",
-        "schwierigkeit": "3",
-        "gefahrenstufe": "4",
-        "erreichbarkeit": "0"
-    },
-    "Piz Scalottas": {
-        "gefahrenstufe": "1",
-        "erreichbarkeit": "1",
-        "hoehenmeter": "500",
-        "tiefenmeter": "600",
-        "dauer": "<1",
-        "schwierigkeit": "1"
-    },
     "Ochsenalp": {
         "gefahrenstufe": "2",
         "erreichbarkeit": "1",
@@ -103,21 +15,13 @@
         "dauer": "<1",
         "schwierigkeit": "1"
     },
-    "Neuberg": {
+    "Affenberg": {
         "gefahrenstufe": "1",
         "erreichbarkeit": "1",
         "hoehenmeter": "500",
         "tiefenmeter": "600",
         "dauer": "<1",
         "schwierigkeit": "1"
-    },
-    "Affenberg": {
-        "gefahrenstufe": "5",
-        "erreichbarkeit": "1",
-        "hoehenmeter": "1000",
-        "tiefenmeter": "1500",
-        "dauer": "1",
-        "schwierigkeit": "2"
     },
     "Schuldenberg": {
         "gefahrenstufe": "5",
@@ -126,5 +30,93 @@
         "tiefenmeter": "3000",
         "dauer": "3",
         "schwierigkeit": "5"
+    },
+    "Montalin": {
+        "gefahrenstufe": "4",
+        "erreichbarkeit": "0",
+        "hoehenmeter": "1000",
+        "tiefenmeter": "2000",
+        "dauer": "1",
+        "schwierigkeit": "3"
+    },
+    "Heimberg": {
+        "gefahrenstufe": "2",
+        "erreichbarkeit": "1",
+        "hoehenmeter": "1500",
+        "tiefenmeter": "3000",
+        "dauer": "1",
+        "schwierigkeit": "4"
+    },
+    "Pilatus": {
+        "gefahrenstufe": "3",
+        "erreichbarkeit": "1",
+        "hoehenmeter": "500",
+        "tiefenmeter": "1000",
+        "dauer": "<1",
+        "schwierigkeit": "2"
+    },
+    "Rigi": {
+        "gefahrenstufe": "4",
+        "erreichbarkeit": "1",
+        "hoehenmeter": "2000",
+        "tiefenmeter": "2000",
+        "dauer": "2",
+        "schwierigkeit": "3"
+    },
+    "Titlis ": {
+        "gefahrenstufe": "3",
+        "erreichbarkeit": "1",
+        "hoehenmeter": "1500",
+        "tiefenmeter": "1500",
+        "dauer": "2",
+        "schwierigkeit": "3"
+    },
+    "Jochstock": {
+        "gefahrenstufe": "2",
+        "erreichbarkeit": "1",
+        "hoehenmeter": "1000",
+        "tiefenmeter": "600",
+        "dauer": "<1",
+        "schwierigkeit": "2"
+    },
+    "Rothorn": {
+        "gefahrenstufe": "4",
+        "erreichbarkeit": "0",
+        "hoehenmeter": "3000",
+        "tiefenmeter": "1000",
+        "dauer": "1",
+        "schwierigkeit": "2"
+    },
+    "Mausiberg": {
+        "gefahrenstufe": "2",
+        "erreichbarkeit": "0",
+        "hoehenmeter": "2000",
+        "tiefenmeter": "2000",
+        "dauer": "1",
+        "schwierigkeit": "2"
+    },
+    "Hinterberg": {
+        "gefahrenstufe": "2",
+        "erreichbarkeit": "0",
+        "hoehenmeter": "1000",
+        "tiefenmeter": "600",
+        "dauer": "2",
+        "schwierigkeit": "3"
+    },
+    "Hochstock": {
+        "gefahrenstufe": "4",
+        "erreichbarkeit": "1",
+        "hoehenmeter": "1000",
+        "tiefenmeter": "2000",
+        "dauer": "2",
+        "schwierigkeit": "3"
+    },
+    "Bundaberg": {
+        "gefahrenstufe": "3",
+        "erreichbarkeit": "0",
+        "hoehenmeter": "1500",
+        "tiefenmeter": "1000",
+        "dauer": "2",
+        "schwierigkeit": "4"
     }
 }
