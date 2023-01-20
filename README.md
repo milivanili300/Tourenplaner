@@ -15,7 +15,7 @@ Wie bereits in der Problembeschreibung erwähnt, kann zur Benutzung der Anwendun
 
 **Architektur**
 
-![Ablaufdiagramm](C:\src\images\Ablaufdiagramm_1.png)
+![Ablaufdiagramm](Tourenplaner/static/images/Ablaufdiagramm_1.png)
 
 **Ungelöste/unbearbeitete Probleme**
 
