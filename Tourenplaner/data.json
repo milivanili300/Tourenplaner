@@ -126,5 +126,13 @@
         "tiefenmeter": "2000",
         "dauer": "1",
         "schwierigkeit": "3"
+    },
+    "Herlisberg": {
+        "gefahrenstufe": "1",
+        "erreichbarkeit": "1",
+        "hoehenmeter": "2000",
+        "tiefenmeter": "1500",
+        "dauer": "2",
+        "schwierigkeit": "2"
     }
 }
