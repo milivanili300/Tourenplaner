@@ -8,6 +8,7 @@ Damit das Programm funktioniert braucht es ausser Flask keine zusätzlichen Pake
 Zum richtigen Ausführen der Anwendung muss die mit main.py betitelte Date ausgeführt werden. Diese wird den Tourenplaner richtig starten. 
 
 Benutzung
+
 Wie bereits in der Problembeschreibung erwähnt, kann zur Benutzung der Anwendung Kriterien angewählt werden, welche wiederum mit der existierenden Datenbank in Form eines Json abgespeichert ist, abgeglichen werden. Sofern eine übereinstimmende Tour existiert, wird diese angezeigt. Falls dies nicht der Fall sein soll, kann die Anwenderin oder der Anwender es unendliche Male erneut versuchen oder hat auch die Möglichkeit eigene Touren hinzuzufügen. Der genaue Ablauf wird im nächsten Abschnitt erläutert.  
 
 Architektur
