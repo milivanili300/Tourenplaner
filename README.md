@@ -15,7 +15,7 @@ Wie bereits in der Problembeschreibung erwähnt, kann zur Benutzung der Anwendun
 
 **Architektur**
 
-<img src="C:\Users\milen\OneDrive\Desktop\FHGR\DBM_HS22\Prog2\pro2_projekt\Tourenplaner\images\Ablaufdiagramm_1.png"/>
+![Ablaufdiagramm](C:\Users\milen\OneDrive\Desktop\FHGR\DBM_HS22\Prog2\pro2_projekt\Tourenplaner\images\Ablaufdiagramm_1.png)
 
 **Ungelöste/unbearbeitete Probleme**
 
